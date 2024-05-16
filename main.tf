@@ -27,7 +27,7 @@ resource "aws_subnet" "tf_public_subnets" {
 # Create private subnet
 resource "aws_subnet" "tf_private_subnets" { 
  vpc_id     = aws_vpc.tf_vpc.id
- cidr_block = "20.10.10.0/24"
+ cidr_block = "20.10.11.0/24"
   # Data Center of this subnet.
   availability_zone = "us-east-1a"
  
