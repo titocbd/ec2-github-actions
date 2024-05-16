@@ -1,6 +1,6 @@
 # Create VPC
 resource "aws_vpc" "tf_vpc" {
-  cidr_block = "20.0.0.0/16"
+  cidr_block = "20.10.0.0/16"
   #enable_dns_support = true
   #enable_dns_hostnames = true
 
@@ -12,7 +12,7 @@ resource "aws_vpc" "tf_vpc" {
 # Create public subnet
 resource "aws_subnet" "tf_public_subnets" { 
  vpc_id     = aws_vpc.tf_vpc.id
- cidr_block = "20.10.0.0/24"
+ cidr_block = "20.10.10.0/24"
   # Data Center of this subnet.
   availability_zone = "us-east-1a"
   
@@ -27,7 +27,7 @@ resource "aws_subnet" "tf_public_subnets" {
 # Create private subnet
 resource "aws_subnet" "tf_private_subnets" { 
  vpc_id     = aws_vpc.tf_vpc.id
- cidr_block = "20.11.0.0/24"
+ cidr_block = "20.10.10.0/24"
   # Data Center of this subnet.
   availability_zone = "us-east-1a"
  
